@@ -1,0 +1,10 @@
+@import "tailwindcss";
+:root {
+  --font-family: var(--font-lato);
+  --second-family: var(--font-rufina);
+  --third-family: var(--font-inter);
+}
+
+body {
+  font-family: var(--font-family);
+}
