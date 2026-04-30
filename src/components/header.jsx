@@ -60,14 +60,13 @@ export default function Header() {
 
       {isOpen && (
         <div className="fixed inset-0 z-30">
-          {/* BG */}
           <Image src={bgmain} alt="bg" fill className="object-cover" />
           <div className="absolute inset-0 bg-[#233000]/90"></div>
 
           <div className="relative z-40 flex items-center justify-between h-full px-32">
             <ul className="flex flex-col gap-8 text-white font-semibold">
               {[
-                { name: "Home", href: "/" },
+                { name: "Home", href: "/home" },
                 { name: "Menu", href: "/menu" },
                 { name: "Blogs", href: "/blogs" },
                 { name: "About", href: "/about" },

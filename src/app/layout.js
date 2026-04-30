@@ -1,5 +1,6 @@
 import { Lato, Rufina, Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -34,7 +35,10 @@ export default function RootLayout({ children }) {
         h-full antialiased
       `}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

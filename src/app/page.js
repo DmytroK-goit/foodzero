@@ -20,7 +20,7 @@ export default function Home() {
       />
       <div className="absolute inset-0 bg-[#233000]/85 z-10"></div>
 
-      <header className="absolute top-0 left-0 w-full z-30 flex justify-between items-center px-20 py-6 text-white">
+      {/* <header className="absolute top-0 left-0 w-full z-30 flex justify-between items-center px-20 py-6 text-white">
         <Link href="/">
           <Image src={Logo} alt="Logo" width={200} />
         </Link>
@@ -50,7 +50,7 @@ export default function Home() {
             <span className="w-8 h-[2px] bg-white"></span>
           </button>
         </div>
-      </header>
+      </header> */}
 
       <section className="relative z-20 flex items-center justify-center min-h-screen">
         {!isOpen && (
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="flex justify-between w-full max-w-6xl px-10">
             <ul className="flex flex-col gap-8 text-white font-semibold">
               {[
-                { name: "Home", href: "/" },
+                { name: "Home", href: "/home" },
                 { name: "Menu", href: "/menu" },
                 { name: "Blogs", href: "/blogs" },
                 { name: "About", href: "/about" },
