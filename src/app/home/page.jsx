@@ -6,6 +6,9 @@ import peper from "../../../img/home/peper.png";
 import leaves from "../../../img/home/leavs.png";
 import chef from "../../../img/home/Chef.png";
 import leav from "../../../img/home/Leaf.png";
+import fish from "../../../img/home/fish.png";
+import carrot from "../../../img/home/Icon_carrot.png";
+import lemon from "../../../img/home/Icon_lemon.png";
 import { menu } from "@/db/menu";
 
 export default function Page() {
@@ -105,25 +108,83 @@ export default function Page() {
           })}
         </ul>
       </section>
-      <section className="bg-[#ebf0e4] w-full px-[138px]">
-        <div className="flex">
-          <div className="relative ">
-            <Image src={chef} alt="Chef cook" className="relative z-2" />
+      <section className="relative bg-[#ebf0e4] w-full px-[138px] py-[180px] overflow-hidden">
+        <div className="grid grid-cols-2 gap-20 items-center">
+          <div className="relative flex justify-center">
             <Image
-              className="absolute left-0 top-0 z-1"
               src={leav}
-              alt="Leav"
+              alt="Leaf"
+              className="absolute -top-[80px] -left-[60px] w-[260px] opacity-80 z-0"
+            />
+
+            <Image
+              src={chef}
+              alt="Chef cook"
+              className="relative z-10 w-full max-w-[700px] object-cover shadow-2xl"
             />
           </div>
-          <div>
-            <h3 className="text-[108px]">Excellent cook</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
-              lorem id penatibus imperdiet. Turpis egestas ultricies purus
-              auctor tincidunt lacus nunc.{" "}
+
+          <div className="relative flex flex-col justify-center">
+            <h3 className="text-[108px] leading-[1] mb-10 max-w-[620px]">
+              Excellent cook
+            </h3>
+
+            <p className="text-[#4d4d4d] text-[24px] leading-[1.8] max-w-[620px]">
+              Our chef combines modern techniques with seasonal ingredients to
+              create unforgettable dishes full of flavor and elegance. Every
+              plate is crafted with passion, precision, and attention to the
+              smallest details.
             </p>
+
+            <Image
+              src={leav}
+              alt="Leaf"
+              className="absolute -bottom-[120px] right-[-60px] w-[320px] rotate-180 opacity-70"
+            />
           </div>
         </div>
+      </section>
+      <section className="bg-white px-[138px] py-[180px]">
+        <ul className="grid grid-cols-3 gap-20 items-start">
+          <li className="flex flex-col items-center text-center">
+            <div className="bg-[#ebf0e4] rounded-full w-60 h-60 flex items-center justify-center mb-10">
+              <Image src={fish} alt="Fish" />
+            </div>
+
+            <h4 className="text-5xl font-bold mb-6">Premium Quality</h4>
+
+            <p className="text-2xl text-[#4d4d4d] leading-[1.7] max-w-[420px]">
+              We select only the finest ingredients to ensure every dish is rich
+              in flavor, freshness, and exceptional quality.
+            </p>
+          </li>
+
+          <li className="flex flex-col items-center text-center">
+            <div className="bg-[#ebf0e4] rounded-full w-60 h-60 flex items-center justify-center mb-10">
+              <Image src={carrot} alt="Carrot" />
+            </div>
+
+            <h4 className="text-5xl font-bold mb-6">Seasonal Vegetables</h4>
+
+            <p className="text-2xl text-[#4d4d4d] leading-[1.7] max-w-[420px]">
+              Our menu changes with the seasons, bringing vibrant vegetables
+              harvested at their peak taste and nutrition.
+            </p>
+          </li>
+
+          <li className="flex flex-col items-center text-center">
+            <div className="bg-[#ebf0e4] rounded-full w-60 h-60 flex items-center justify-center mb-10">
+              <Image src={lemon} alt="Lemon" />
+            </div>
+
+            <h4 className="text-5xl font-bold mb-6">Fresh Fruit</h4>
+
+            <p className="text-2xl text-[#4d4d4d] leading-[1.7] max-w-[420px]">
+              Carefully chosen fresh fruit adds natural sweetness, bright
+              flavors, and a refreshing finish to every meal.
+            </p>
+          </li>
+        </ul>
       </section>
     </>
   );

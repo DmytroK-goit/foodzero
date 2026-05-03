@@ -10,7 +10,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="relative w-full min-h-screen overflow-hidden">
+    <main className="max-w-480 relative w-full min-h-screen overflow-hidden">
       <Image
         src={bgmain}
         alt="Background"
