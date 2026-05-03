@@ -16,20 +16,23 @@ export default function Page() {
     <>
       <section className="relative bg-[#233000] w-full min-h-screen px-[138px] pt-[302px] pb-[200px] overflow-hidden">
         <div className="relative min-h-[1100px]">
+          {/* TEXT BLOCK */}
           <div className="absolute z-20 max-w-[1057px]">
             <h1 className="text-white text-[138px] leading-[1] tracking-[-2px]">
               Healthy Eating is important part of lifestyle
             </h1>
 
             <p className="text-white text-[24px] w-[60%] mt-8 leading-[1.6] opacity-90">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
-              congue arcu
+              Discover balanced meals made with natural ingredients that support
+              your body, energize your day, and help you feel your best.
             </p>
+
             <p className="absolute -left-[255px] top-[150%] rotate-90 whitespace-nowrap text-white tracking-[8px] text-[48px]">
               SCROLL ------------
             </p>
           </div>
 
+          {/* IMAGE BLOCK */}
           <div className="absolute top-[170px] right-0 z-10">
             <Image src={meat} alt="Meat" width={792} height={931} />
 
@@ -42,7 +45,6 @@ export default function Page() {
             />
           </div>
         </div>
-        {/* {"second block "} */}
         <div className="mt-[100px] grid grid-cols-2 gap-24 items-end">
           <div className="flex flex-col">
             <Image
@@ -58,15 +60,15 @@ export default function Page() {
             </h3>
 
             <p className="text-white text-[24px] leading-[1.7] opacity-90 max-w-[600px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
-              congue arcu
+              Choose nourishing meals, create healthy habits, and enjoy food
+              that brings both taste and wellness into your daily routine.
             </p>
           </div>
 
           <div className="flex flex-col items-end">
-            <p className="text-white text-[24px] leading-[1.7] opacity-90 max-w-[500px] mb-10 ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
-              congue arcu
+            <p className="text-white text-[24px] leading-[1.7] opacity-90 max-w-[500px] mb-10">
+              Fresh ingredients, thoughtful recipes, and simple choices can make
+              every meal more satisfying and naturally delicious.
             </p>
 
             <Image

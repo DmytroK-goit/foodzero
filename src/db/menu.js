@@ -3,24 +3,24 @@ export const menu = [
     id: 1,
     coast: "20",
     name: "Deep Sea Snow White Cod Fillet",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    desc: "Delicate cod fillet served with seasonal herbs and a light citrus sauce.",
   },
   {
     id: 2,
     coast: "22",
     name: "Steak With Rosemary Butter",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    desc: "Juicy grilled steak finished with aromatic rosemary butter and sea salt.",
   },
   {
     id: 3,
     coast: "18",
     name: "Cucumber Salad",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    desc: "Fresh cucumber salad with garden greens, olive oil, and lemon dressing.",
   },
   {
     id: 4,
     coast: "90",
     name: "Natural Wine Pairing",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    desc: "A curated selection of premium natural wines chosen for your meal.",
   },
 ];
