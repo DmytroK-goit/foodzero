@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import meat from "../../../img/home/meat.png";
 import spice from "../../../img/home/spice.png";
@@ -12,6 +15,7 @@ import lemon from "../../../img/home/Icon_lemon.png";
 import { menu } from "@/db/menu";
 import { blogs } from "@/db/blogs";
 import Link from "next/link";
+import Reservations from "@/components/reservations";
 
 export default function Page() {
   return (
@@ -219,6 +223,7 @@ export default function Page() {
           })}
         </ul>
       </section>
+      <Reservations />
     </>
   );
 }

@@ -20,38 +20,6 @@ export default function Home() {
       />
       <div className="absolute inset-0 bg-[#233000]/85 z-10"></div>
 
-      {/* <header className="absolute top-0 left-0 w-full z-30 flex justify-between items-center px-20 py-6 text-white">
-        <Link href="/">
-          <Image src={Logo} alt="Logo" width={200} />
-        </Link>
-
-        <div className="flex items-center gap-6">
-          {!isOpen && (
-            <>
-              <a href="tel:+86852346000" className="text-xl">
-                +86 852 346 000
-              </a>
-
-              <Link
-                href="/reservations"
-                className="border border-white px-5 py-3 hover:border-[#9CAA00] transition"
-              >
-                Reservations
-              </Link>
-            </>
-          )}
-
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex flex-col gap-1"
-          >
-            <span className="w-8 h-[2px] bg-white"></span>
-            <span className="w-8 h-[2px] bg-white"></span>
-            <span className="w-8 h-[2px] bg-white"></span>
-          </button>
-        </div>
-      </header> */}
-
       <section className="relative z-20 flex items-center justify-center min-h-screen">
         {!isOpen && (
           <Link
