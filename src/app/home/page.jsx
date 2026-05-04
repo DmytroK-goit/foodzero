@@ -10,6 +10,8 @@ import fish from "../../../img/home/fish.png";
 import carrot from "../../../img/home/Icon_carrot.png";
 import lemon from "../../../img/home/Icon_lemon.png";
 import { menu } from "@/db/menu";
+import { blogs } from "@/db/blogs";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -186,6 +188,35 @@ export default function Page() {
               flavors, and a refreshing finish to every meal.
             </p>
           </li>
+        </ul>
+      </section>
+      <section className="bg-white px-[138px] py-[130px]">
+        <ul className="grid grid-cols-2 gap-x-10 gap-y-20">
+          {blogs.slice(0, 2).map((blog) => {
+            return (
+              <li key={blog.id} className="flex flex-col group">
+                <div className="overflow-hidden mb-8">
+                  <Image
+                    src={blog.img}
+                    alt={blog.name}
+                    className="w-full h-auto object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <h4 className="text-[42px] leading-[1.2] font-bold mb-5 max-w-[700px] group-hover:text-[#9CAA00] transition">
+                  {blog.name}
+                </h4>
+                <p className="text-[#4d4d4d] text-[24px] leading-[1.7] mb-8 max-w-[620px]">
+                  {blog.desc}
+                </p>
+                <Link
+                  href={`/blogs/${blog.id}`}
+                  className="text-[24px] font-semibold border-b border-black w-fit pb-1 hover:text-[#9CAA00] hover:border-[#9CAA00] transition"
+                >
+                  Show More
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </section>
     </>
