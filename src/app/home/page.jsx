@@ -12,6 +12,10 @@ import leav from "../../../img/home/Leaf.png";
 import fish from "../../../img/home/fish.png";
 import carrot from "../../../img/home/Icon_carrot.png";
 import lemon from "../../../img/home/Icon_lemon.png";
+import starters from "../../../img/calories/sterter.png";
+import main from "../../../img/calories/main.png";
+import Soup from "../../../img/calories/soup.png";
+import Right from "../../../img/calories/arrow-right.png";
 import { menu } from "@/db/menu";
 import { blogs } from "@/db/blogs";
 import Link from "next/link";
@@ -224,6 +228,78 @@ export default function Page() {
         </ul>
       </section>
       <Reservations />
+      <section className="bg-white px-[138px] py-[140px]">
+        <div className="max-w-[900px] mx-auto text-center mb-20">
+          <h2 className="text-[108px] leading-[1] mb-6">
+            Calories Energy Balance
+          </h2>
+
+          <p className="text-[#4d4d4d] text-[24px] leading-[1.7]">
+            Explore thoughtfully prepared dishes designed to bring taste,
+            nutrition, and balance to every meal.
+          </p>
+        </div>
+        <ul className="grid grid-cols-3 gap-8">
+          <li className="relative group overflow-hidden cursor-pointer">
+            <Image
+              src={starters}
+              alt="Starters menu"
+              className="w-full h-auto object-cover transition duration-500 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition duration-500"></div>
+
+            <h4 className="absolute top-[48px] left-[40px] text-white text-5xl z-10">
+              Starters
+            </h4>
+
+            <Link href="/menu">
+              <div className="absolute top-[48px] right-[40px] z-10 bg-white w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-[#9CAA00] transition">
+                <Image src={Right} alt="Right" />
+              </div>
+            </Link>
+          </li>
+
+          <li className="relative group overflow-hidden cursor-pointer">
+            <Image
+              src={main}
+              alt="Main menu"
+              className="w-full h-auto object-cover transition duration-500 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition duration-500"></div>
+
+            <h4 className="absolute top-[48px] left-[40px] text-white text-5xl z-10">
+              Mains
+            </h4>
+
+            <Link href="/menu">
+              <div className="absolute top-[48px] right-[40px] z-10 bg-white w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-[#9CAA00] transition">
+                <Image src={Right} alt="Right" />
+              </div>
+            </Link>
+          </li>
+          <li className="relative group overflow-hidden cursor-pointer">
+            <Image
+              src={Soup}
+              alt="Soup menu"
+              className="w-full h-auto object-cover transition duration-500 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition duration-500"></div>
+
+            <h4 className="absolute top-[48px] left-[40px] text-white text-5xl z-10">
+              Soup
+            </h4>
+
+            <Link href="/menu">
+              <div className="absolute top-[48px] right-[40px] z-10 bg-white w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-[#9CAA00] transition">
+                <Image src={Right} alt="Right" />
+              </div>
+            </Link>
+          </li>
+        </ul>
+      </section>
     </>
   );
 }
