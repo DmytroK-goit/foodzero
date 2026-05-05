@@ -20,6 +20,12 @@ import { menu } from "@/db/menu";
 import { blogs } from "@/db/blogs";
 import Link from "next/link";
 import Reservations from "@/components/reservations";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { reveiw } from "@/db/reveiw";
 
 export default function Page() {
   return (
@@ -299,6 +305,46 @@ export default function Page() {
             </Link>
           </li>
         </ul>
+      </section>
+      <section className="bg-white px-[138px] py-[100px]">
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          className="w-full max-w-[1200px] mx-auto"
+        >
+          {reveiw.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className="flex flex-col items-center text-center px-10 py-16">
+                <p className="text-[42px] leading-[1.5] max-w-[950px] mb-14 text-[#233000]">
+                  “{item.text}”
+                </p>
+                <div className="flex items-center gap-6">
+                  <Image
+                    src={item.avatar}
+                    alt={item.name}
+                    width={90}
+                    height={90}
+                    className="rounded-full object-cover"
+                  />
+
+                  <div className="text-left">
+                    <h4 className="text-[28px] font-bold">{item.name}</h4>
+                    <span className="text-[#4d4d4d] text-lg">
+                      Happy Customer
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
     </>
   );
