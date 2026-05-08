@@ -32,7 +32,6 @@ export default function Page() {
     <>
       <section className="relative bg-[#233000] w-full min-h-screen px-[138px] pt-[302px] pb-[200px] overflow-hidden">
         <div className="relative min-h-[1100px]">
-          {/* TEXT BLOCK */}
           <div className="absolute z-20 max-w-[1057px]">
             <h1 className="text-white text-[138px] leading-[1] tracking-[-2px]">
               Healthy Eating is important part of lifestyle
@@ -48,10 +47,8 @@ export default function Page() {
             </p>
           </div>
 
-          {/* IMAGE BLOCK */}
           <div className="absolute top-[170px] right-0 z-10">
             <Image src={meat} alt="Meat" width={792} height={931} />
-
             <Image
               src={spice}
               alt="Spice"

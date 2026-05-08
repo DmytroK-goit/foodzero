@@ -4,16 +4,22 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../img/Logo.png";
+import LogoWhite from "../../img/Logo_white.png";
 import bgmain from "../../img/bg_main.png";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage =
+    pathname === "/" || pathname === "/home" || pathname === "/blogs";
+  const currentLogo = isHomePage ? LogoWhite : Logo;
 
   return (
     <>
       <header className="absolute top-0 left-0 w-full z-40 flex justify-between items-center px-20 py-6 text-white">
         <Link href="/">
-          <Image src={Logo} alt="Logo image" width={200} />
+          <Image src={currentLogo} alt="Logo image" width={200} />
         </Link>
 
         <div className="flex items-center gap-6">
