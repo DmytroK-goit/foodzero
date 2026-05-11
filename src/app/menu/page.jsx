@@ -29,9 +29,8 @@ export default function Page() {
         <Image
           src={startersBg}
           alt="Starters Background"
-          fill
           priority
-          className="object-cover object-right opacity-10 -z-10"
+          className="absolute top-0 right-0"
         />
 
         <div className="text-center mb-24">
