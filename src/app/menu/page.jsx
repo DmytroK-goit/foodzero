@@ -2,6 +2,7 @@ import Image from "next/image";
 import menuBg from "../../../img/menu/menu_bg.png";
 import Reservations from "@/components/reservations";
 import startersBg from "../../../img/menu/starters_bg.png";
+import drinksBg from "../../../img/menu/drinks_bg.png";
 import { menu } from "@/db/menu";
 export default function Page() {
   return (
@@ -77,6 +78,101 @@ export default function Page() {
               );
             })}
         </ul>
+        <div className="text-center mb-24 mt-24">
+          <h2 className="text-[108px] leading-[1] mb-6">Mains</h2>
+
+          <p className="text-2xl text-[#4d4d4d] max-w-[720px] mx-auto leading-[1.7]">
+            This is a section of your menu. Give your section a brief
+            description
+          </p>
+        </div>
+
+        <ul className="grid grid-cols-2 gap-x-20 gap-y-20 relative z-10">
+          {menu
+            .filter((item) => item.cat === "mains")
+            .map((item) => {
+              return (
+                <li
+                  key={item.id}
+                  className="flex gap-8 group border-b border-black/10 pb-10"
+                >
+                  <div className="overflow-hidden w-[220px] h-[220px] shrink-0">
+                    <Image
+                      src={item.img}
+                      alt={item.name}
+                      className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-between w-full">
+                    <div className="flex justify-between gap-8 items-start">
+                      <h3 className="text-[42px] leading-[1.2] max-w-[500px] group-hover:text-[#9CAA00] transition">
+                        {item.name}
+                      </h3>
+
+                      <span className="text-[36px] font-bold whitespace-nowrap">
+                        ${item.coast}
+                      </span>
+                    </div>
+
+                    <p className="text-[#4d4d4d] text-[22px] leading-[1.7] mt-4">
+                      {item.desc}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+        </ul>
+        <div className="relative">
+          <Image
+            src={drinksBg}
+            alt="Drinks Background"
+            priority
+            className="absolute -top-30 left-[50%]"
+          />
+          <div className="text-center mb-24 mt-24">
+            <h2 className="text-[108px] leading-[1] mb-6">Pastries & Drinks</h2>
+
+            <p className="text-2xl text-[#4d4d4d] max-w-[720px] mx-auto leading-[1.7]">
+              This is a section of your menu. Give your section a brief
+              description
+            </p>
+          </div>
+          <ul className="grid grid-cols-2 gap-x-20 gap-y-20 relative z-10">
+            {menu
+              .filter((item) => item.cat === "mains")
+              .map((item) => {
+                return (
+                  <li
+                    key={item.id}
+                    className="flex gap-8 group border-b border-black/10 pb-10"
+                  >
+                    <div className="overflow-hidden w-[220px] h-[220px] shrink-0">
+                      <Image
+                        src={item.img}
+                        alt={item.name}
+                        className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-between w-full">
+                      <div className="flex justify-between gap-8 items-start">
+                        <h3 className="text-[42px] leading-[1.2] max-w-[500px] group-hover:text-[#9CAA00] transition">
+                          {item.name}
+                        </h3>
+
+                        <span className="text-[36px] font-bold whitespace-nowrap">
+                          ${item.coast}
+                        </span>
+                      </div>
+
+                      <p className="text-[#4d4d4d] text-[22px] leading-[1.7] mt-4">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
+          </ul>{" "}
+        </div>
       </section>
       <Reservations />
     </section>
