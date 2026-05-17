@@ -4,6 +4,11 @@ import tomato from "../../../img/about/Tomato.png";
 import ourStories from "../../../img/about/OurStories.png";
 import manager from "../../../img/about/menager.png";
 import chef from "../../../img/about/chef.png";
+import rosemary from "../../../img/about/rosemary.png";
+import rosemary2 from "../../../img/about/rosemary2.png";
+import slice from "../../../img/about/slice.png";
+import picked from "../../../img/about/picked.png";
+import bake from "../../../img/about/bake.png";
 import Image from "next/image";
 
 export default function Page() {
@@ -146,6 +151,96 @@ export default function Page() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="relative flex flex-col gap-40 px-[138px] py-[160px] bg-[#f5f5f2] overflow-hidden">
+        <Image
+          src={rosemary}
+          alt="Rosemary"
+          className="absolute top-0 right-0 "
+        />
+
+        <div className="text-center">
+          <h2 className="text-[88px] leading-none text-[#111] font-semibold">
+            Sophisticated Process
+          </h2>
+
+          <p className="text-[#6b6b6b] text-2xl mt-6 max-w-[720px] mx-auto leading-[1.8]">
+            Every dish at Food Zero follows a carefully crafted process designed
+            to preserve freshness, elevate flavor, and create unforgettable
+            dining experiences.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-24 items-center">
+          <div className="overflow-hidden shadow-2xl">
+            <Image
+              src={slice}
+              alt="Slice"
+              className="w-full h-auto object-cover hover:scale-105 transition duration-700"
+            />
+          </div>
+
+          <div className="max-w-[520px] flex flex-col gap-6">
+            <h3 className="text-7xl text-[#111] font-semibold leading-none">
+              01.Slice
+            </h3>
+
+            <p className="text-2xl text-[#555] leading-[1.9]">
+              Our chefs begin with precision slicing techniques that preserve
+              texture, tenderness, and the natural richness of every ingredient.
+              Each cut is crafted to enhance both presentation and flavor.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-24 items-center">
+          <div className="max-w-[520px] flex flex-col gap-6 ml-auto">
+            <h3 className="text-7xl text-[#111] font-semibold leading-none">
+              02.Pickled
+            </h3>
+
+            <p className="text-2xl text-[#555] leading-[1.9]">
+              Through delicate pickling methods, we create balanced flavors with
+              a touch of acidity and depth. This process adds complexity while
+              keeping ingredients vibrant and refreshing.
+            </p>
+          </div>
+
+          <div className="overflow-hidden shadow-2xl">
+            <Image
+              src={picked}
+              alt="Picked"
+              className="w-full h-auto object-cover hover:scale-105 transition duration-700"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-24 items-center">
+          <div className="overflow-hidden shadow-2xl">
+            <Image
+              src={bake}
+              alt="Bake"
+              className="w-full h-auto object-cover hover:scale-105 transition duration-700"
+            />
+          </div>
+
+          <div className="max-w-[520px] flex flex-col gap-6">
+            <h3 className="text-7xl text-[#111] font-semibold leading-none">
+              03.Bake
+            </h3>
+
+            <p className="text-2xl text-[#555] leading-[1.9]">
+              The final baking stage locks in aroma and flavor, creating
+              perfectly textured dishes with rich character. Slow heat and
+              expert timing ensure every plate is served at its absolute best.
+            </p>
+          </div>
+        </div>
+        <Image
+          src={rosemary2}
+          alt="Rosemary"
+          className="absolute bottom-0 -left-22 "
+        />
       </section>
       <Reservations />
     </section>
