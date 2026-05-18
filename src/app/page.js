@@ -104,21 +104,23 @@ export default function Page() {
           </p>
         </div>
         <ul className="grid grid-cols-2 gap-x-24 gap-y-20 px-[138px] pt-[122px] pb-[200px]">
-          {menu.map((item) => {
+          {menu.slice(0, 4).map((item) => {
             return (
-              <li key={item.id} className="flex flex-col">
-                <span className="text-[48px] font-bold text-right border-b border-black pb-4">
-                  ${item.coast}
-                </span>
+              <Link key={item.id} href="/menu">
+                <li key={item.id} className="flex flex-col">
+                  <span className="text-[48px] font-bold text-right border-b border-black pb-4">
+                    ${item.coast}
+                  </span>
 
-                <h3 className="text-[48px] leading-[1.2] mt-6 mb-4 max-w-[650px]">
-                  {item.name}
-                </h3>
+                  <h3 className="text-[48px] leading-[1.2] mt-6 mb-4 max-w-[650px]">
+                    {item.name}
+                  </h3>
 
-                <p className="text-[#4d4d4d] text-[24px] leading-[1.6] max-w-[620px]">
-                  {item.desc}
-                </p>
-              </li>
+                  <p className="text-[#4d4d4d] text-[24px] leading-[1.6] max-w-[620px]">
+                    {item.desc}
+                  </p>
+                </li>
+              </Link>
             );
           })}
         </ul>
