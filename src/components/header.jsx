@@ -72,7 +72,7 @@ export default function Header() {
           <div className="relative z-40 flex items-center justify-between h-full px-32">
             <ul className="flex flex-col gap-8 text-white font-semibold">
               {[
-                { name: "Home", href: "/home" },
+                { name: "Home", href: "/" },
                 { name: "Menu", href: "/menu" },
                 { name: "Blogs", href: "/blogs" },
                 { name: "About", href: "/about" },
