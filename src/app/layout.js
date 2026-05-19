@@ -2,6 +2,8 @@ import { Lato, Rufina, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import AnimationProvider from "@/components/AnimationProvider";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -37,9 +39,15 @@ export default function RootLayout({ children }) {
       `}
     >
       <body className="min-h-full flex flex-col justify-between">
-        <Header />
-        {children}
-        <Footer />
+        <AnimationProvider>
+          <Header />
+
+          {children}
+
+          <ScrollToTop />
+
+          <Footer />
+        </AnimationProvider>
       </body>
     </html>
   );

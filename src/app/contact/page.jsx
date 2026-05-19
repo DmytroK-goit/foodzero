@@ -2,6 +2,9 @@ import Image from "next/image";
 import contactbg from "../../../img/contact/contactbg.png";
 import orange from "../../../img/contact/Orange.png";
 import table from "../../../img/contact/table.png";
+import build from "../../../img/contact/build.png";
+import Link from "next/link";
+import Reservations from "@/components/reservations";
 
 export default function Page() {
   return (
@@ -82,6 +85,37 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section className="relative bg-[#f5f5f2] overflow-hidden py-[140px]">
+        <div className="relative px-[138px]">
+          <div className="relative z-10 flex items-center justify-between gap-24">
+            <div className="max-w-[520px] flex flex-col gap-8">
+              <span className="uppercase tracking-[6px] text-[#9CAA00] text-sm font-semibold">
+                Location
+              </span>
+
+              <p className="text-2xl text-[#555] leading-[1.9]">
+                We are located in 1959 Sepulveda Blvd. Culver City, CA, 90230
+              </p>
+              <Link
+                className="w-40 px-6 py-4 border border-black flex items-center justify-center transition duration-300 hover:scale-[1.05]"
+                href="https://www.google.com/maps"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View in maps
+              </Link>
+            </div>
+            <div className="overflow-hidden rounded-[28px] shadow-2xl">
+              <Image
+                src={build}
+                alt="Restourant"
+                className="w-[620px] h-auto object-cover hover:scale-105 transition duration-700"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <Reservations />
     </section>
   );
 }

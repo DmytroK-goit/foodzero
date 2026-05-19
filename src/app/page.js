@@ -29,7 +29,7 @@ import { reveiw } from "@/db/reveiw";
 
 export default function Page() {
   return (
-    <>
+    <section>
       <section className="relative bg-[#233000] w-full min-h-screen px-[138px] pt-[302px] pb-[200px] overflow-hidden">
         <div className="relative min-h-[1100px]">
           <div className="absolute z-20 max-w-[1057px]">
@@ -345,6 +345,6 @@ export default function Page() {
           ))}
         </Swiper>
       </section>
-    </>
+    </section>
   );
 }

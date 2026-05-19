@@ -1,8 +1,13 @@
 @import "tailwindcss";
+
 :root {
   --font-family: var(--font-lato);
   --second-family: var(--font-rufina);
   --third-family: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
