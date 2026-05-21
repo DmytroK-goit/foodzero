@@ -15,10 +15,7 @@ export default function Page() {
   }, []);
   return (
     <section className="bg-white w-full overflow-hidden">
-      <section
-        data-reveal
-        className="relative h-screen flex items-center justify-center px-[138px]"
-      >
+      <section className="relative h-screen flex items-center justify-center px-[138px]">
         <Image
           src={menuBg}
           alt="Menu Background"
@@ -28,11 +25,17 @@ export default function Page() {
         />
 
         <div className="relative z-10 text-center max-w-[1100px]">
-          <h2 className="text-white text-[108px] leading-[1] mb-8">
+          <h2
+            data-reveal="text"
+            className="text-white text-[108px] leading-[1] mb-8"
+          >
             View Our New Menu
           </h2>
 
-          <p className="text-white text-[26px] leading-[1.8] opacity-90 max-w-[760px] mx-auto">
+          <p
+            data-reveal="text"
+            className="text-white text-[26px] leading-[1.8] opacity-90 max-w-[760px] mx-auto"
+          >
             The freshest ingredients for you every day
           </p>
         </div>

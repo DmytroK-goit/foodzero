@@ -4,14 +4,16 @@ export const imageReveal = (element) => {
   gsap.fromTo(
     element,
     {
-      scale: 1.2,
       opacity: 0,
+      scale: 1.2,
+      clipPath: "inset(15% 0% 15% 0%)",
     },
     {
-      scale: 1,
       opacity: 1,
-      duration: 1.4,
-      ease: "power3.out",
+      scale: 1,
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 2,
+      ease: "power4.out",
     },
   );
 };

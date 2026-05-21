@@ -6,18 +6,17 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { heroAnimation } from "@/animations/heroAnimation";
 import { initScrollReveal } from "@/animations/scrollReveal";
+import { imageReveal } from "@/animations";
 
 export default function Page() {
   useEffect(() => {
     heroAnimation();
     initScrollReveal();
+    imageReveal();
   }, []);
   return (
     <section className="bg-white w-full overflow-hidden">
-      <section
-        data-reveal
-        className="relative h-screen flex items-center justify-center px-[138px]"
-      >
+      <section className="relative h-screen flex items-center justify-center px-[138px]">
         <Image
           src={bgBlog}
           alt="Blogs Background"
@@ -27,9 +26,17 @@ export default function Page() {
         />
         <div className="absolute inset-0 bg-[#233000]/65"></div>
         <div className="relative z-10 text-center max-w-[1100px]">
-          <h2 className="text-white text-[108px] leading-[1] mb-8">Blogs</h2>
+          <h2
+            data-reveal="text"
+            className="text-white text-[108px] leading-[1] mb-8"
+          >
+            Blogs
+          </h2>
 
-          <p className="text-white text-[26px] leading-[1.8] opacity-90 max-w-[760px] mx-auto">
+          <p
+            data-reveal="text"
+            className="text-white text-[26px] leading-[1.8] opacity-90 max-w-[760px] mx-auto"
+          >
             Discover stories, recipes, healthy lifestyle tips, and culinary
             inspiration crafted to bring fresh ideas to your table every day.
           </p>

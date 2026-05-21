@@ -22,10 +22,7 @@ export default function Page() {
   }, []);
   return (
     <section className="bg-white w-full overflow-hidden">
-      <section
-        data-reveal
-        className="relative h-screen flex items-center justify-center px-[138px]"
-      >
+      <section className="relative h-screen flex items-center justify-center px-[138px]">
         <Image
           src={aboutBg}
           alt="About us Background"
@@ -35,11 +32,17 @@ export default function Page() {
         />
 
         <div className="relative z-10 text-center max-w-[1100px]">
-          <h2 className="text-white text-[108px] leading-[1] mb-8">
+          <h2
+            data-reveal="text"
+            className="text-white text-[108px] leading-[1] mb-8"
+          >
             Who We Are
           </h2>
 
-          <p className="text-white text-[26px] leading-[1.8] opacity-90 max-w-[760px] mx-auto">
+          <p
+            data-reveal="text"
+            className="text-white text-[26px] leading-[1.8] opacity-90 max-w-[760px] mx-auto"
+          >
             The most important thing for us is to give you the comfortable
             dining experience
           </p>
@@ -56,11 +59,17 @@ export default function Page() {
         />
 
         <div className="relative z-10 max-w-[620px] flex flex-col gap-8">
-          <h2 className="text-8xl leading-tight text-[#233000] font-semibold">
+          <h2
+            data-reveal="text"
+            className="text-8xl leading-tight text-[#233000] font-semibold"
+          >
             Our Story
           </h2>
 
-          <p className="text-2xl leading-[1.8] text-[#4d4d4d]">
+          <p
+            data-reveal="text"
+            className="text-2xl leading-[1.8] text-[#4d4d4d]"
+          >
             Food Zero was created from a passion for honest ingredients,
             seasonal flavors, and unforgettable dining experiences. We believe
             every meal should tell a story — from locally sourced produce to
@@ -73,7 +82,10 @@ export default function Page() {
             sharing food with others.
           </p>
         </div>
-        <div className="relative z-10 overflow-hidden rounded-[24px] shadow-2xl">
+        <div
+          data-reveal="image"
+          className="relative z-10 overflow-hidden rounded-[24px] shadow-2xl"
+        >
           <Image
             src={ourStories}
             alt="Our Stories"
@@ -87,7 +99,10 @@ export default function Page() {
       >
         <div className="grid grid-cols-2 gap-24 items-center">
           <div className="relative group">
-            <div className="overflow-hidden rounded-[28px] shadow-2xl">
+            <div
+              data-reveal="image"
+              className="overflow-hidden rounded-[28px] shadow-2xl"
+            >
               <Image
                 src={manager}
                 alt="Manager"
@@ -151,7 +166,10 @@ export default function Page() {
           </div>
 
           <div className="relative group">
-            <div className="overflow-hidden rounded-[28px] shadow-2xl">
+            <div
+              data-reveal="image"
+              className="overflow-hidden rounded-[28px] shadow-2xl"
+            >
               <Image
                 src={chef}
                 alt="Chef"
@@ -192,7 +210,7 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-2 gap-24 items-center">
-          <div className="overflow-hidden shadow-2xl">
+          <div data-reveal="image" className="overflow-hidden shadow-2xl">
             <Image
               src={slice}
               alt="Slice"
@@ -226,7 +244,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="overflow-hidden shadow-2xl">
+          <div data-reveal="image" className="overflow-hidden shadow-2xl">
             <Image
               src={picked}
               alt="Picked"
@@ -236,7 +254,7 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-2 gap-24 items-center">
-          <div className="overflow-hidden shadow-2xl">
+          <div data-reveal="image" className="overflow-hidden shadow-2xl">
             <Image
               src={bake}
               alt="Bake"

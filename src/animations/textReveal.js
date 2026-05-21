@@ -20,7 +20,7 @@ export const textReveal = (element) => {
     chars,
     {
       opacity: 0,
-      y: 20,
+      y: 40,
     },
     {
       opacity: 1,
