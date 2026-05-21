@@ -1,3 +1,4 @@
+"use client";
 import Reservations from "@/components/reservations";
 import aboutBg from "../../../img/about/main_bg.png";
 import tomato from "../../../img/about/Tomato.png";
@@ -10,11 +11,21 @@ import slice from "../../../img/about/slice.png";
 import picked from "../../../img/about/picked.png";
 import bake from "../../../img/about/bake.png";
 import Image from "next/image";
+import { heroAnimation } from "@/animations/heroAnimation";
+import { initScrollReveal } from "@/animations/scrollReveal";
+import { useEffect } from "react";
 
 export default function Page() {
+  useEffect(() => {
+    heroAnimation();
+    initScrollReveal();
+  }, []);
   return (
     <section className="bg-white w-full overflow-hidden">
-      <section className="relative h-screen flex items-center justify-center px-[138px]">
+      <section
+        data-reveal
+        className="relative h-screen flex items-center justify-center px-[138px]"
+      >
         <Image
           src={aboutBg}
           alt="About us Background"
@@ -34,7 +45,10 @@ export default function Page() {
           </p>
         </div>
       </section>
-      <section className="relative flex items-center justify-between gap-16 px-[138px] py-[140px] overflow-hidden bg-[#f9f9f7]">
+      <section
+        data-reveal
+        className="relative flex items-center justify-between gap-16 px-[138px] py-[140px] overflow-hidden bg-[#f9f9f7]"
+      >
         <Image
           src={tomato}
           alt="Tomato"
@@ -67,7 +81,10 @@ export default function Page() {
           />
         </div>
       </section>
-      <section className="relative flex flex-col gap-32 px-[138px] py-[140px] bg-[#f9f9f7] overflow-hidden">
+      <section
+        data-reveal
+        className="relative flex flex-col gap-32 px-[138px] py-[140px] bg-[#f9f9f7] overflow-hidden"
+      >
         <div className="grid grid-cols-2 gap-24 items-center">
           <div className="relative group">
             <div className="overflow-hidden rounded-[28px] shadow-2xl">
@@ -152,7 +169,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="relative flex flex-col gap-40 px-[138px] py-[160px] bg-[#f5f5f2] overflow-hidden">
+      <section
+        data-reveal
+        className="relative flex flex-col gap-40 px-[138px] py-[160px] bg-[#f5f5f2] overflow-hidden"
+      >
         <Image
           src={rosemary}
           alt="Rosemary"

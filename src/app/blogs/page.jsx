@@ -1,12 +1,23 @@
+"use client";
 import Image from "next/image";
 import bgBlog from "../../../img/blogs_main.png";
 import { blogs } from "@/db/blogs";
 import Link from "next/link";
+import { useEffect } from "react";
+import { heroAnimation } from "@/animations/heroAnimation";
+import { initScrollReveal } from "@/animations/scrollReveal";
 
 export default function Page() {
+  useEffect(() => {
+    heroAnimation();
+    initScrollReveal();
+  }, []);
   return (
     <section className="bg-white w-full overflow-hidden">
-      <section className="relative h-screen flex items-center justify-center px-[138px]">
+      <section
+        data-reveal
+        className="relative h-screen flex items-center justify-center px-[138px]"
+      >
         <Image
           src={bgBlog}
           alt="Blogs Background"
@@ -25,7 +36,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="px-[138px] py-[140px]">
+      <section data-reveal className="px-[138px] py-[140px]">
         <div className="grid grid-cols-2 gap-x-14 gap-y-24">
           {blogs.map((blog) => {
             return (

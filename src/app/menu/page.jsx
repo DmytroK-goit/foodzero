@@ -1,13 +1,24 @@
+"use client";
 import Image from "next/image";
 import menuBg from "../../../img/menu/menu_bg.png";
 import Reservations from "@/components/reservations";
 import startersBg from "../../../img/menu/starters_bg.png";
 import drinksBg from "../../../img/menu/drinks_bg.png";
 import { menu } from "@/db/menu";
+import { useEffect } from "react";
+import { heroAnimation } from "@/animations/heroAnimation";
+import { initScrollReveal } from "@/animations/scrollReveal";
 export default function Page() {
+  useEffect(() => {
+    heroAnimation();
+    initScrollReveal();
+  }, []);
   return (
     <section className="bg-white w-full overflow-hidden">
-      <section className="relative h-screen flex items-center justify-center px-[138px]">
+      <section
+        data-reveal
+        className="relative h-screen flex items-center justify-center px-[138px]"
+      >
         <Image
           src={menuBg}
           alt="Menu Background"
@@ -26,7 +37,10 @@ export default function Page() {
           </p>
         </div>
       </section>
-      <section className="relative px-[138px] py-[140px] overflow-hidden bg-white">
+      <section
+        data-reveal
+        className="relative px-[138px] py-[140px] overflow-hidden bg-white"
+      >
         <Image
           src={startersBg}
           alt="Starters Background"
@@ -43,7 +57,10 @@ export default function Page() {
           </p>
         </div>
 
-        <ul className="grid grid-cols-2 gap-x-20 gap-y-20 relative z-10">
+        <ul
+          data-reveal
+          className="grid grid-cols-2 gap-x-20 gap-y-20 relative z-10"
+        >
           {menu
             .filter((item) => item.cat === "starters")
             .map((item) => {
@@ -87,7 +104,10 @@ export default function Page() {
           </p>
         </div>
 
-        <ul className="grid grid-cols-2 gap-x-20 gap-y-20 relative z-10">
+        <ul
+          data-reveal
+          className="grid grid-cols-2 gap-x-20 gap-y-20 relative z-10"
+        >
           {menu
             .filter((item) => item.cat === "mains")
             .map((item) => {
@@ -137,7 +157,10 @@ export default function Page() {
               description
             </p>
           </div>
-          <ul className="grid grid-cols-2 gap-x-20 gap-y-20 relative z-10">
+          <ul
+            data-reveal
+            className="grid grid-cols-2 gap-x-20 gap-y-20 relative z-10"
+          >
             {menu
               .filter((item) => item.cat === "mains")
               .map((item) => {

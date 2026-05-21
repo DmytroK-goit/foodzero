@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import contactbg from "../../../img/contact/contactbg.png";
 import orange from "../../../img/contact/Orange.png";
@@ -5,11 +6,21 @@ import table from "../../../img/contact/table.png";
 import build from "../../../img/contact/build.png";
 import Link from "next/link";
 import Reservations from "@/components/reservations";
+import { useEffect } from "react";
+import { heroAnimation } from "@/animations/heroAnimation";
+import { initScrollReveal } from "@/animations/scrollReveal";
 
 export default function Page() {
+  useEffect(() => {
+    heroAnimation();
+    initScrollReveal();
+  }, []);
   return (
     <section className="bg-white w-full overflow-hidden">
-      <section className="relative h-screen flex items-center justify-center px-[138px]">
+      <section
+        data-reveal
+        className="relative h-screen flex items-center justify-center px-[138px]"
+      >
         <Image
           src={contactbg}
           alt="Contact us Background"
@@ -28,7 +39,7 @@ export default function Page() {
           </p>
         </div>
       </section>
-      <section className="relative bg-[#f5f5f2] overflow-hidden py-[140px]">
+      <section v className="relative bg-[#f5f5f2] overflow-hidden py-[140px]">
         <div className="relative px-[138px]">
           <Image
             src={orange}
@@ -85,7 +96,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="relative bg-[#f5f5f2] overflow-hidden py-[140px]">
+      <section
+        data-reveal
+        className="relative bg-[#f5f5f2] overflow-hidden py-[140px]"
+      >
         <div className="relative px-[138px]">
           <div className="relative z-10 flex items-center justify-between gap-24">
             <div className="max-w-[520px] flex flex-col gap-8">
