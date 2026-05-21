@@ -4,9 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const initScrollReveal = () => {
-  const elements = document.querySelectorAll("[data-reveal]");
-
-  elements.forEach((el) => {
+  gsap.utils.toArray("[data-reveal]").forEach((el) => {
     gsap.fromTo(
       el,
       {

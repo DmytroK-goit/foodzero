@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import meat from "../../img/home/meat.png";
 import spice from "../../img/home/spice.png";
@@ -26,18 +26,34 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { reveiw } from "@/db/reveiw";
+import { useEffect } from "react";
+import { heroAnimation } from "@/animations/heroAnimation";
+import { initScrollReveal } from "@/animations/scrollReveal";
 
 export default function Page() {
+  useEffect(() => {
+    heroAnimation();
+    initScrollReveal();
+  }, []);
   return (
     <section>
-      <section className="relative bg-[#233000] w-full min-h-screen px-[138px] pt-[302px] pb-[200px] overflow-hidden">
+      <section
+        data-reveal
+        className="relative bg-[#233000] w-full min-h-screen px-[138px] pt-[302px] pb-[200px] overflow-hidden"
+      >
         <div className="relative min-h-[1100px]">
           <div className="absolute z-20 max-w-[1057px]">
-            <h1 className="text-white text-[138px] leading-[1] tracking-[-2px]">
+            <h1
+              data-hero-title
+              className="text-white text-[138px] leading-[1] tracking-[-2px]"
+            >
               Healthy Eating is important part of lifestyle
             </h1>
 
-            <p className="text-white text-[24px] w-[60%] mt-8 leading-[1.6] opacity-90">
+            <p
+              data-hero-text
+              className="text-white text-[24px] w-[60%] mt-8 leading-[1.6] opacity-90"
+            >
               Discover balanced meals made with natural ingredients that support
               your body, energize your day, and help you feel your best.
             </p>
@@ -47,7 +63,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="absolute top-[170px] right-0 z-10">
+          <div data-hero-image className="absolute top-[170px] right-0 z-10">
             <Image src={meat} alt="Meat" width={792} height={931} />
             <Image
               src={spice}
@@ -94,7 +110,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="relative bg-white w-full ">
+      <section data-reveal className="relative bg-white w-full ">
         <Image src={leaves} alt="Leaves" className="absolute top-0 right-0" />
         <div className="pl-[138px] pt-[176px] ">
           <h2 className="text-[108px] text-bolt">Our Menu</h2>
@@ -125,7 +141,10 @@ export default function Page() {
           })}
         </ul>
       </section>
-      <section className="relative bg-[#ebf0e4] w-full px-[138px] py-[180px] overflow-hidden">
+      <section
+        data-reveal
+        className="relative bg-[#ebf0e4] w-full px-[138px] py-[180px] overflow-hidden"
+      >
         <div className="grid grid-cols-2 gap-20 items-center">
           <div className="relative flex justify-center">
             <Image
@@ -161,7 +180,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-[138px] py-[180px]">
+      <section data-reveal className="bg-white px-[138px] py-[180px]">
         <ul className="grid grid-cols-3 gap-20 items-start">
           <li className="flex flex-col items-center text-center">
             <div className="bg-[#ebf0e4] rounded-full w-60 h-60 flex items-center justify-center mb-10">
@@ -203,7 +222,7 @@ export default function Page() {
           </li>
         </ul>
       </section>
-      <section className="bg-white px-[138px] py-[130px]">
+      <section data-reveal className="bg-white px-[138px] py-[130px]">
         <ul className="grid grid-cols-2 gap-x-10 gap-y-20">
           {blogs.slice(0, 2).map((blog) => {
             return (
@@ -233,7 +252,7 @@ export default function Page() {
         </ul>
       </section>
       <Reservations />
-      <section className="bg-white px-[138px] py-[140px]">
+      <section data-reveal className="bg-white px-[138px] py-[140px]">
         <div className="max-w-[900px] mx-auto text-center mb-20">
           <h2 className="text-[108px] leading-[1] mb-6">
             Calories Energy Balance
@@ -305,7 +324,7 @@ export default function Page() {
           </li>
         </ul>
       </section>
-      <section className="bg-white px-[138px] py-[100px]">
+      <section data-reveal className="bg-white px-[138px] py-[100px]">
         <Swiper
           modules={[Pagination, Autoplay]}
           slidesPerView={1}
