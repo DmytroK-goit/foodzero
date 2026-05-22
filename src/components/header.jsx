@@ -12,16 +12,20 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage =
-    pathname === "/" || pathname === "/home" || pathname === "/blogs";
+    pathname === "/" ||
+    pathname === "/home" ||
+    pathname === "/blogs" ||
+    pathname === "/about" ||
+    pathname === "/blogs" ||
+    pathname === "/contact";
   const currentLogo = isHomePage ? LogoWhite : Logo;
 
   return (
     <>
-      <header className="absolute top-0 left-0 w-full z-40 flex justify-between items-center px-20 py-6 text-white">
+      <header className="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-20 py-6 text-white backdrop-blur-xl bg-black/20 border-b border-white/10 transition-all duration-500 ">
         <Link href="/">
           <Image src={currentLogo} alt="Logo image" width={200} />
         </Link>
-
         <div className="flex items-center gap-6">
           {!isOpen && (
             <>
@@ -46,19 +50,16 @@ export default function Header() {
             className="flex flex-col gap-1 z-50"
           >
             <span
-              className={`w-8 h-[2px] bg-white transition ${
-                isOpen ? "rotate-45 translate-y-[6px]" : ""
-              }`}
+              className={`w-8 h-[2px] bg-white transition ${isOpen ? "rotate-45 translate-y-[6px]" : ""
+                }`}
             ></span>
             <span
-              className={`w-8 h-[2px] bg-white transition ${
-                isOpen ? "opacity-0" : ""
-              }`}
+              className={`w-8 h-[2px] bg-white transition ${isOpen ? "opacity-0" : ""
+                }`}
             ></span>
             <span
-              className={`w-8 h-[2px] bg-white transition ${
-                isOpen ? "-rotate-45 -translate-y-[6px]" : ""
-              }`}
+              className={`w-8 h-[2px] bg-white transition ${isOpen ? "-rotate-45 -translate-y-[6px]" : ""
+                }`}
             ></span>
           </button>
         </div>

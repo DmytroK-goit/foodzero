@@ -15,6 +15,7 @@ import lemon from "../../img/home/Icon_lemon.png";
 import starters from "../../img/calories/sterter.png";
 import main from "../../img/calories/main.png";
 import Soup from "../../img/calories/soup.png";
+import bgHome from "../../img/home/bgHome.png";
 import Right from "../../img/calories/arrow-right.png";
 import { menu } from "@/db/menu";
 import { blogs } from "@/db/blogs";
@@ -37,11 +38,17 @@ export default function Page() {
   }, []);
   return (
     <section>
-      <section
-        data-reveal
-        className="relative bg-[#233000] w-full min-h-screen px-[138px] pt-[302px] pb-[200px] overflow-hidden"
-      >
-        <div className="relative min-h-[1100px]">
+      <section className="relative bg-[#233000] w-full min-h-screen px-[138px] pt-[302px] pb-[200px] overflow-hidden">
+        <Image
+          src={bgHome}
+          alt="Background Photo"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#233000]/90 via-[#233000]/70 to-[#233000]"></div>
+
+        <div className="relative z-10 min-h-[1100px]">
           <div className="absolute z-20 max-w-[1057px]">
             <h1
               data-hero-title
@@ -75,7 +82,7 @@ export default function Page() {
           </div>
         </div>
         <div className="mt-[100px] grid grid-cols-2 gap-24 items-end">
-          <div className="flex flex-col">
+          <div data-hero-image className="flex flex-col">
             <Image
               src={soup}
               alt="Soup"
@@ -105,7 +112,7 @@ export default function Page() {
               alt="Peper"
               width={508}
               height={710}
-              className="shadow-2xl"
+              className="shadow-2xl z-15"
             />
           </div>
         </div>

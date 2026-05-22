@@ -48,7 +48,7 @@ export default function Page() {
           {blogs.map((blog) => {
             return (
               <article key={blog.id} className="group flex flex-col">
-                <div className="overflow-hidden mb-8 rounded-sm">
+                <div data-hero-image className="overflow-hidden mb-8 rounded-sm">
                   <Image
                     src={blog.img}
                     alt={blog.name}

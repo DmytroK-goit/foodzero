@@ -24,7 +24,8 @@ const inter = Inter({
 
 export const metadata = {
   title: "FoodZERO",
-  description: "Restaurant website",
+  description:
+    "FoodZERO is a modern restaurant website focused on healthy eating, seasonal ingredients, and unforgettable dining experiences. Discover elegant dishes, fresh products, and a refined culinary atmosphere.",
 };
 
 export default function RootLayout({ children }) {

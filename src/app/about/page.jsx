@@ -52,7 +52,7 @@ export default function Page() {
         data-reveal
         className="relative flex items-center justify-between gap-16 px-[138px] py-[140px] overflow-hidden bg-[#f9f9f7]"
       >
-        <Image
+        <Image data-hero-image
           src={tomato}
           alt="Tomato"
           className="absolute top-0 left-1/2 -translate-x-1/2  rotate-12"
@@ -83,7 +83,7 @@ export default function Page() {
           </p>
         </div>
         <div
-          data-reveal="image"
+          data-hero-image
           className="relative z-10 overflow-hidden rounded-[24px] shadow-2xl"
         >
           <Image
@@ -100,7 +100,7 @@ export default function Page() {
         <div className="grid grid-cols-2 gap-24 items-center">
           <div className="relative group">
             <div
-              data-reveal="image"
+              data-hero-image
               className="overflow-hidden rounded-[28px] shadow-2xl"
             >
               <Image
@@ -167,7 +167,7 @@ export default function Page() {
 
           <div className="relative group">
             <div
-              data-reveal="image"
+              data-hero-image
               className="overflow-hidden rounded-[28px] shadow-2xl"
             >
               <Image
@@ -210,7 +210,7 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-2 gap-24 items-center">
-          <div data-reveal="image" className="overflow-hidden shadow-2xl">
+          <div data-hero-image className="overflow-hidden shadow-2xl">
             <Image
               src={slice}
               alt="Slice"
@@ -244,7 +244,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div data-reveal="image" className="overflow-hidden shadow-2xl">
+          <div data-hero-image className="overflow-hidden shadow-2xl">
             <Image
               src={picked}
               alt="Picked"
@@ -254,7 +254,7 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-2 gap-24 items-center">
-          <div data-reveal="image" className="overflow-hidden shadow-2xl">
+          <div data-hero-image className="overflow-hidden shadow-2xl">
             <Image
               src={bake}
               alt="Bake"
