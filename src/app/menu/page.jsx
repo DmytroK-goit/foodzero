@@ -8,11 +8,35 @@ import { menu } from "@/db/menu";
 import { useEffect } from "react";
 import { heroAnimation } from "@/animations/heroAnimation";
 import { initScrollReveal } from "@/animations/scrollReveal";
+import { usePathname } from "next/navigation";
 export default function Page() {
+  const pathname = usePathname();
   useEffect(() => {
     heroAnimation();
     initScrollReveal();
   }, []);
+
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+      if (!hash) return;
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }
+    };
+    scrollToHash();
+    window.addEventListener("hashchange", scrollToHash);
+    return () => {
+      window.removeEventListener("hashchange", scrollToHash);
+    };
+  }, [pathname]);
+
   return (
     <section className="bg-white w-full overflow-hidden">
       <section className="relative h-screen flex items-center justify-center px-[138px]">
@@ -26,7 +50,7 @@ export default function Page() {
 
         <div className="relative z-10 text-center max-w-[1100px]">
           <h2
-            data-reveal="text"
+            data-hero-title
             className="text-white text-[108px] leading-[1] mb-8"
           >
             View Our New Menu
@@ -51,8 +75,8 @@ export default function Page() {
           className="absolute top-0 right-0"
         />
 
-        <div className="text-center mb-24">
-          <h2 className="text-[108px] leading-[1] mb-6">Starters</h2>
+        <div id="starters" className="text-center mb-24">
+          <h2 data-hero-title className="text-[108px] leading-[1] mb-6">Starters</h2>
 
           <p className="text-2xl text-[#4d4d4d] max-w-[720px] mx-auto leading-[1.7]">
             Begin your dining experience with fresh, elegant starters prepared
@@ -98,8 +122,8 @@ export default function Page() {
               );
             })}
         </ul>
-        <div className="text-center mb-24 mt-24">
-          <h2 className="text-[108px] leading-[1] mb-6">Mains</h2>
+        <div id="mains" className="text-center mb-24 mt-24">
+          <h2 data-hero-title className="text-[108px] leading-[1] mb-6">Mains</h2>
 
           <p className="text-2xl text-[#4d4d4d] max-w-[720px] mx-auto leading-[1.7]">
             This is a section of your menu. Give your section a brief
@@ -152,8 +176,8 @@ export default function Page() {
             priority
             className="absolute -top-30 left-[50%]"
           />
-          <div className="text-center mb-24 mt-24">
-            <h2 className="text-[108px] leading-[1] mb-6">Pastries & Drinks</h2>
+          <div id="pastries" className="text-center mb-24 mt-24">
+            <h2 data-hero-title className="text-[108px] leading-[1] mb-6">Pastries & Drinks</h2>
 
             <p className="text-2xl text-[#4d4d4d] max-w-[720px] mx-auto leading-[1.7]">
               This is a section of your menu. Give your section a brief

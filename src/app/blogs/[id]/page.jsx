@@ -10,7 +10,7 @@ export default async function Page({ params }) {
     return (
       <section className="min-h-screen flex items-center justify-center bg-white">
         <div className="text-center">
-          <h2 className="text-[72px] mb-6">Blog Not Found</h2>
+          <h2 data-hero-title className="text-[72px] mb-6">Blog Not Found</h2>
 
           <Link
             href="/blogs"
@@ -37,7 +37,7 @@ export default async function Page({ params }) {
         <div className="absolute inset-0 bg-black/45"></div>
 
         <div className="relative z-10 max-w-[1200px] px-[138px] text-center">
-          <h1 className="text-white text-[88px] leading-[1.1]">{blog.name}</h1>
+          <h1 data-hero-title className="text-white text-[88px] leading-[1.1]">{blog.name}</h1>
         </div>
       </section>
 

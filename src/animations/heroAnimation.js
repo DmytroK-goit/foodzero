@@ -1,18 +1,26 @@
 import gsap from "gsap";
+import SplitType from "split-type";
 
 export const heroAnimation = () => {
+  const split = new SplitType("[data-hero-title]", {
+    types: "chars",
+  });
+
   const tl = gsap.timeline();
 
   tl.fromTo(
-    "[data-hero-title]",
+    split.chars,
     {
       opacity: 0,
       y: 120,
+      rotateX: -90,
     },
     {
       opacity: 1,
       y: 0,
-      duration: 1.2,
+      rotateX: 0,
+      stagger: 0.03,
+      duration: 1,
       ease: "power4.out",
     },
   )
@@ -29,7 +37,7 @@ export const heroAnimation = () => {
         duration: 1,
         ease: "power3.out",
       },
-      "-=0.7",
+      "-=0.5",
     )
 
     .fromTo(
@@ -41,7 +49,7 @@ export const heroAnimation = () => {
       {
         opacity: 1,
         scale: 1,
-        duration: 1.4,
+        duration: 1.6,
         ease: "power3.out",
       },
       "-=1",

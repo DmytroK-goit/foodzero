@@ -27,7 +27,7 @@ export default function Page() {
         <div className="absolute inset-0 bg-[#233000]/65"></div>
         <div className="relative z-10 text-center max-w-[1100px]">
           <h2
-            data-reveal="text"
+            data-hero-title
             className="text-white text-[108px] leading-[1] mb-8"
           >
             Blogs

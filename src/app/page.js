@@ -36,6 +36,7 @@ export default function Page() {
     heroAnimation();
     initScrollReveal();
   }, []);
+
   return (
     <section>
       <section className="relative bg-[#233000] w-full min-h-screen px-[138px] pt-[302px] pb-[200px] overflow-hidden">
@@ -284,7 +285,7 @@ export default function Page() {
               Starters
             </h4>
 
-            <Link href="/menu">
+            <Link href="/menu#starters">
               <div className="absolute top-[48px] right-[40px] z-10 bg-white w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-[#9CAA00] transition">
                 <Image src={Right} alt="Right" />
               </div>
@@ -304,7 +305,7 @@ export default function Page() {
               Mains
             </h4>
 
-            <Link href="/menu">
+            <Link href="/menu#mains">
               <div className="absolute top-[48px] right-[40px] z-10 bg-white w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-[#9CAA00] transition">
                 <Image src={Right} alt="Right" />
               </div>
@@ -323,7 +324,7 @@ export default function Page() {
               Soup
             </h4>
 
-            <Link href="/menu">
+            <Link href="/menu#pastries">
               <div className="absolute top-[48px] right-[40px] z-10 bg-white w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-[#9CAA00] transition">
                 <Image src={Right} alt="Right" />
               </div>

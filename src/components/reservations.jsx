@@ -29,7 +29,7 @@ export default function Reservations() {
   return (
     <section className="h-[1100px] bg-[#ebf0e4] w-full flex flex-col items-center justify-center px-[138px] relative">
       <Image src={mint} alt="Mint" className="absolute top-6 left-14" />
-      <h3 className="text-[108px] leading-[1] mb-8 text-center">
+      <h3 data-hero-title className="text-[108px] leading-[1] mb-8 text-center">
         Make a Reservation
       </h3>
       <p className="text-[#4d4d4d] text-[24px] mb-20 text-center">

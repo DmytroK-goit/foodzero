@@ -10,6 +10,7 @@ import rosemary2 from "../../../img/about/rosemary2.png";
 import slice from "../../../img/about/slice.png";
 import picked from "../../../img/about/picked.png";
 import bake from "../../../img/about/bake.png";
+import capCake from '../../../img/about/capcake.png'
 import Image from "next/image";
 import { heroAnimation } from "@/animations/heroAnimation";
 import { initScrollReveal } from "@/animations/scrollReveal";
@@ -60,7 +61,7 @@ export default function Page() {
 
         <div className="relative z-10 max-w-[620px] flex flex-col gap-8">
           <h2
-            data-reveal="text"
+            data-hero-title
             className="text-8xl leading-tight text-[#233000] font-semibold"
           >
             Our Story
@@ -185,6 +186,33 @@ export default function Page() {
               <p className="text-[#9CAA00] text-lg mt-1">Jane Cooper</p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="relative flex items-center justify-center h-[814px] w-full overflow-hidden">
+        <Image
+          src={capCake}
+          alt="CapCake"
+          fill
+          className="object-cover scale-105"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-[#233000]/90 via-[#233000]/70 to-[#233000]"></div>
+        <div className="relative z-10 text-center px-6">
+          <h2
+            data-reveal="text"
+            className="text-white text-[108px] leading-[1] mb-8"
+          >
+            It looks delicious
+          </h2>
+
+          <p
+            data-reveal="text"
+            className="text-white text-[26px] leading-[1.8] opacity-90 max-w-[760px] mx-auto"
+          >
+            Every dessert is thoughtfully created to combine refined taste,
+            delicate texture, and unforgettable visual elegance.
+
+          </p>
         </div>
       </section>
       <section
