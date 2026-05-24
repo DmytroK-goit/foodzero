@@ -78,6 +78,7 @@ export default function Header() {
                 { name: "Blogs", href: "/blogs" },
                 { name: "About", href: "/about" },
                 { name: "Contact", href: "/contact" },
+                { name: "Portfolio", href: "/portfolio" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link
