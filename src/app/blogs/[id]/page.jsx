@@ -1,6 +1,8 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { blogs } from "@/db/blogs";
+
 
 export default async function Page({ params }) {
   const resolvedParams = await params;
@@ -37,7 +39,7 @@ export default async function Page({ params }) {
         <div className="absolute inset-0 bg-black/45"></div>
 
         <div className="relative z-10 max-w-[1200px] px-[138px] text-center">
-          <h1 data-hero-title className="text-white text-[88px] leading-[1.1]">{blog.name}</h1>
+          <h2 data-hero-title className="text-white text-[88px] leading-[1.1]">{blog.name}</h2>
         </div>
       </section>
 

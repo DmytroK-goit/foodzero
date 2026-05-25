@@ -42,7 +42,7 @@ export default function Page() {
           </p>
         </div>
       </section>
-      <section v className="relative bg-[#f5f5f2] overflow-hidden py-[140px]">
+      <section className="relative bg-[#f5f5f2] overflow-hidden py-[140px]">
         <div className="relative px-[138px]">
           <Image
             src={orange}

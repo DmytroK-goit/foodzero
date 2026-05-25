@@ -1,9 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import mint from "../../img/Mint.png";
 import Image from "next/image";
+import { heroAnimation } from "@/animations/heroAnimation";
+import { initScrollReveal } from "@/animations/scrollReveal";
 
 export default function Reservations() {
+  useEffect(() => {
+    heroAnimation();
+    initScrollReveal();
+  }, []);
   const [formData, setFormData] = useState({
     date: "",
     time: "",
