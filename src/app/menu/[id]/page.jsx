@@ -82,29 +82,60 @@ export default async function Page({ params }) {
             )}
           </div>
 
-          <div className="bg-white p-12 shadow-2xl rounded-[28px]">
-            <h3 className="text-[36px] text-[#233000] mb-8">Nutrition Facts</h3>
+          <div className="relative overflow-hidden rounded-[32px] bg-[#233000] p-[2px] shadow-[0_25px_80px_rgba(0,0,0,0.12)] group">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#9CAA00]/40 via-transparent to-[#9CAA00]/20 opacity-0 group-hover:opacity-100 transition duration-700"></div>
 
-            <ul className="space-y-5 text-[22px] text-[#4d4d4d]">
-              <li>
-                Calories: <b>{menuItem.calories}</b>
-              </li>
-              <li>
-                Protein: <b>{menuItem.protein}</b>
-              </li>
-              <li>
-                Fat: <b>{menuItem.fat}</b>
-              </li>
-              <li>
-                Carbs: <b>{menuItem.carbs}</b>
-              </li>
-              <li>
-                Cook Time: <b>{menuItem.cookTime}</b>
-              </li>
-              <li>
-                Serving: <b>{menuItem.serving}</b>
-              </li>
-            </ul>
+            <div className="relative bg-[#fdfdf9] rounded-[30px] p-14 transition duration-700 group-hover:bg-[#f4f7ec]">
+              <div className="flex items-center justify-between mb-12">
+                <div>
+                  <span className="uppercase tracking-[4px] text-[#9CAA00] text-sm">Food Zero</span>
+
+                  <h3 className="text-[42px] leading-none text-[#233000] mt-4">Nutrition Facts</h3>
+                </div>
+
+                <div className="w-16 h-16 rounded-full border border-[#d8dec7] flex items-center justify-center text-[#233000] text-xl">
+                  ✦
+                </div>
+              </div>
+
+              <ul className="flex flex-col gap-6">
+                <li className="flex items-center justify-between border-b border-[#dfe5d2] pb-5">
+                  <span className="text-[#4d4d4d] text-[22px]">Calories</span>
+
+                  <span className="text-[#233000] text-[34px] font-semibold">{menuItem.calories}</span>
+                </li>
+
+                <li className="flex items-center justify-between border-b border-[#dfe5d2] pb-5">
+                  <span className="text-[#4d4d4d] text-[22px]">Protein</span>
+
+                  <span className="text-[#233000] text-[28px] font-medium">{menuItem.protein}</span>
+                </li>
+
+                <li className="flex items-center justify-between border-b border-[#dfe5d2] pb-5">
+                  <span className="text-[#4d4d4d] text-[22px]">Fat</span>
+
+                  <span className="text-[#233000] text-[28px] font-medium">{menuItem.fat}</span>
+                </li>
+
+                <li className="flex items-center justify-between border-b border-[#dfe5d2] pb-5">
+                  <span className="text-[#4d4d4d] text-[22px]">Carbs</span>
+
+                  <span className="text-[#233000] text-[28px] font-medium">{menuItem.carbs}</span>
+                </li>
+
+                <li className="flex items-center justify-between border-b border-[#dfe5d2] pb-5">
+                  <span className="text-[#4d4d4d] text-[22px]">Cook Time</span>
+
+                  <span className="text-[#233000] text-[28px] font-medium">{menuItem.cookTime}</span>
+                </li>
+
+                <li className="flex items-center justify-between">
+                  <span className="text-[#4d4d4d] text-[22px]">Serving</span>
+
+                  <span className="text-[#233000] text-[28px] font-medium">{menuItem.serving}</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
