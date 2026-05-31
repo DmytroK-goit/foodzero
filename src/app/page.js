@@ -39,6 +39,7 @@ export default function Page() {
 
   return (
     <section>
+      {/* Main section */}
       <section className="relative bg-[#233000] w-full min-h-screen px-[138px] pt-[302px] pb-[200px] overflow-hidden">
         <Image src={bgHome} alt="Background Photo" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#233000]/90 via-[#233000]/70 to-[#233000]"></div>
@@ -95,6 +96,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      {/* Preview menu */}
       <section data-reveal className="relative bg-white w-full ">
         <Image src={leaves} alt="Leaves" className="absolute top-0 right-0" />
         <div className="pl-[138px] pt-[176px] ">
@@ -117,6 +119,7 @@ export default function Page() {
           })}
         </ul>
       </section>
+      {/* Cooking */}
       <section data-reveal className="relative bg-[#ebf0e4] w-full px-[138px] py-[180px] overflow-hidden">
         <div className="grid grid-cols-2 gap-20 items-center">
           <div className="relative flex justify-center">
@@ -141,6 +144,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      {/* Ingrydients */}
       <section data-reveal className="bg-white px-[138px] py-[180px]">
         <ul className="grid grid-cols-3 gap-20 items-start">
           <li className="flex flex-col items-center text-center">
@@ -180,6 +184,7 @@ export default function Page() {
           </li>
         </ul>
       </section>
+      {/* Preview posts */}
       <section data-reveal className="bg-white px-[138px] py-[130px]">
         <ul className="grid grid-cols-2 gap-x-10 gap-y-20">
           {blogs.slice(0, 2).map((blog) => {
@@ -208,6 +213,7 @@ export default function Page() {
         </ul>
       </section>
       <Reservations />
+      {/* Our menu */}
       <section data-reveal className="bg-white px-[138px] py-[140px]">
         <div className="max-w-[900px] mx-auto text-center mb-20">
           <h2 className="text-[108px] leading-[1] mb-6">Calories Energy Balance</h2>
@@ -263,6 +269,7 @@ export default function Page() {
           </li>
         </ul>
       </section>
+      {/* Comments */}
       <section data-reveal className="bg-white px-[138px] py-[100px]">
         <Swiper
           modules={[Pagination, Autoplay]}
